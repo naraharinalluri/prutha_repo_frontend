@@ -1,0 +1,22 @@
+
+#tabs:hover{
+    background-color: #d7d4d4d4;
+}
+#list{
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 43px;
+    display: inline-block;
+    margin: 0 0 0 0;
+   align-items: unset;
+}
+#ul{
+    /* padding-bottom: 5px; */
+}
+#a1{
+    color: #a3a3a3;
+    padding-top: 17px;
+    padding-left: 2px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+}

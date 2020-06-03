@@ -1,0 +1,64 @@
+body {font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  height: 100%;
+  margin-top: 0% !important;
+  background-image: url('./bg1.jpg');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+  
+  /*input[type=password], input[type=email]*/ 
+  #inputField{
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 0px;
+    background: rgb(83, 80, 80,0.5);
+  border-radius: 0px;
+  }
+  
+  #color{
+    color : white;
+  }
+
+  .hrRule {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  button:hover {
+    opacity:0.9;
+    background-color: rgb(46, 34, 220);
+  }
+  
+  .loginbtn {
+    float: left;
+    width: 90%;
+    background-color: rgb(70, 59, 211);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .formContainer{
+      width:25%;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin-left: 55%;
+      margin-top: 10%;
+  }
+  #loginHead{
+      text-align:center;
+      font-size: 20px;
+      font-weight: bold;
+     
+  }
+  #newUser{
+      padding: 10px;
+  }

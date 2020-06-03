@@ -1,0 +1,39 @@
+    #inputField{
+        padding: 10px;
+        margin: 5px 0 10px 0;
+        display: inline-block;
+        border: none;
+        color: white;
+        border-radius: 0px;
+        background: rgb(83, 80, 80,0.5);
+        border-radius: 0px;
+    }
+
+  #signupbtn:hover {
+        opacity: 0.9;
+        background-color: rgb(46, 34, 220);
+    }
+
+    #signupbtn {
+        float: left;
+        background-color: rgb(70, 59, 211);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    #bigOp{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #search{
+        background-color: rgb(70, 59, 211);
+        color: white;
+        /* padding: 14px 20px; */
+        /* margin: 8px 0; */
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+    }

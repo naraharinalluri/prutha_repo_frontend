@@ -1,0 +1,51 @@
+body {font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    }
+    
+    /*input[type=text], input[type=password], input[type=email], input[type=number], input[type=date] */
+    #inputField {
+      width: 85%;
+      padding: 10px;
+      margin: 5px 0 10px 0;
+      display: inline-block;
+      border: none;
+      color: white;
+      border-radius: 0px;
+      background: rgb(83, 80, 80,0.5);
+      border-radius: 0px;
+    } 
+    #hrRule {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    #tnc{
+    color:dodgerblue;
+    }
+    #color{color: white;}
+    .signupbtn:hover {
+      opacity:0.9;
+      background-color: rgb(46, 34, 220);
+    }
+    .signupbtn {
+      float: left;
+      width: 85%;
+      background-color: rgb(70, 59, 211);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    #formContainer{
+        width:40%;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        margin-left: 50%;
+        margin-top: 8%;
+    }
+    #signupHead{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }

@@ -1,0 +1,29 @@
+li{
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.seats li.bookedSeat{
+    background-color: rgb(245, 40, 3);
+}
+.seats li.selected{
+background: green;
+}
+.seats{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-gap:px;
+}
+
+.box {
+    display: flex;
+}
+#box2{
+    display: flex;
+    justify-content: space-around;
+}
