@@ -1,0 +1,32 @@
+.ulAlign {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .liEle {
+    float: left;
+  }
+  
+  .liEle a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .liEle a:hover:not(.active) {
+    background-color: rgb(42, 42, 42);
+    color: azure;
+    text-decoration: none;
+  }
+  #logo{
+      border-radius: 2px;
+      background-color: black;
+  }

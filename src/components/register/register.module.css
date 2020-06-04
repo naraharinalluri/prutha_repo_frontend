@@ -22,13 +22,14 @@ body {font-family: Arial, Helvetica, sans-serif;
     color:dodgerblue;
     }
     #color{color: white;}
-    .signupbtn:hover {
+    /* .signupbtn:hover {
       opacity:0.9;
       background-color: rgb(46, 34, 220);
-    }
+    } */
     .signupbtn {
       float: left;
       width: 85%;
+      /* background-color: black; */
       background-color: rgb(70, 59, 211);
       color: white;
       padding: 14px 20px;
@@ -48,4 +49,20 @@ body {font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         font-size: 30px;
         font-weight: bold;
+    }
+
+    #loginbtn:hover {
+      opacity:0.9;
+      background-color: rgb(46, 34, 220);
+    }
+    #loginbtn {
+      float: left;
+      width: 85%;
+      background-color: rgb(70, 59, 211);
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
     }

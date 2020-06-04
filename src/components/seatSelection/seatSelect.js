@@ -67,10 +67,10 @@ class SeatSelect extends Component {
     renderList = () => {
         return this.state.seatsSelected.map((item, idx) => {
             return (
-                <div className="container" key={idx}>
-                    <p>Seat No : {item.seatNo}</p>
-                    <input type="text" placeholder="Name" name="name" onChange={(event) => this.onChangeHandler(event, item.seatNo)} /><br /><br />
-                    <input type="text" placeholder="Age" name="age" onChange={(event) => this.onChangeHandler(event, item.seatNo)} /><br /><br />
+                <div className="container text-light" key={idx}>
+                    <h6>Seat No : {item.seatNo}</h6>
+                    <input type="text" placeholder="Name" id="inputField" name="name" onChange={(event) => this.onChangeHandler(event, item.seatNo)} /><br /><br />
+                    <input type="text" placeholder="Age" id="inputField" name="age" onChange={(event) => this.onChangeHandler(event, item.seatNo)} /><br /><br />
                 </div>
             )
         })
@@ -120,16 +120,17 @@ class SeatSelect extends Component {
                     </div>
                 </div>
                 <div>
-                    <br /> <h4>PASSENGER DETAILS</h4><br />
+                    <br />  <h5 className="text-light">ENTER YOUR DETAILS</h5><br />
                     {this.renderList()}
                 </div>
-                <div className="container">
-                    <br /><h4>FARE SUMMARY</h4><br />
-                    <h6>TOTAL SEATS SELECTED : {(this.state.onlySeats).length} </h6>
-                    <h6>FARE : </h6>
-                    <h6>SERVICE TAX : </h6>
-                    <h6>TOTAL CHARGES : </h6><br />
-                    <button className="btn btn-lg btn-primary" onClick={e => { e.preventDefault(); this.handleSubmit(); { this.tab(3) } }}>Proceed to Payment</button>
+                <div className="container text-light">
+                    <br /><h5>TRIP INVOICE</h5><br />
+                    <h6>Seats Selected : {(this.state.onlySeats).length} </h6>
+                    <h6>Price : </h6>
+                    <h6>Service Tax : </h6>
+                    <h6>Total Amount : </h6><br />
+                    <button className="paymentbtn" onClick={e => { e.preventDefault(); this.handleSubmit(); { this.tab(3) } }}>Proceed to Payment</button>
+                    <br /><br />
                 </div>
             </div >
         );

@@ -4,17 +4,22 @@ import './App.css';
 import Index from './home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Tabs from './components/tabs/tabs';
-
+import Login from './components/login/login';
+import Home from './components/home/Home'
+// import Navbar from './components/navbar/navbar'  
 
 
 function App() {
   return (
     <div>
+      {/* <Navbar /> */}
+
       <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          {/* <Route exact path="/LoginPage" component={Login} /> */}
-          <Route exact path="/loginDone" component={Tabs} />
+          <Route exact path="/Home" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/logindone" component={Tabs} />
         </Switch>
       </Router>
     </div>

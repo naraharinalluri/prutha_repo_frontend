@@ -1,17 +1,21 @@
 li{
     width: 40px;
-    height: 40px;
-    background-color: #ccc;
+    height: 70px;
+    background-color:rgba(255, 255, 255, 0.8);
     margin: 0 5px 5px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2px;
 } 
+li:hover{
+    background-color: rgba(255, 255, 255);
+}
 .seats li.bookedSeat{
     background-color: rgb(245, 40, 3);
 }
 .seats li.selected{
-background: green;
+    background-color: rgb(70, 59, 211);
 }
 .seats{
     margin-top: 40px;
@@ -26,4 +30,38 @@ background: green;
 #box2{
     display: flex;
     justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.6);
 }
+#inputField{
+   /* width: 100%;*/
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    color: white;
+    border-radius: 0px;
+    background: rgb(83, 80, 80,0.9);
+  border-radius: 0px;
+  }
+
+  .paymentbtn:hover {
+    opacity:0.9;
+    background-color: rgb(46, 34, 220);
+  }
+  
+  .paymentbtn {
+    float: left;
+    width: 80%;
+    background-color: rgb(70, 59, 211);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .freeSeats{
+    background-color: white;
+    width:8px;
+    height:8px;
+  }
