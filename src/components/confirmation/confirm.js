@@ -52,7 +52,7 @@ class Confirm extends Component {
                 <h4 id={styles.head}>YOUR TICKET IS BOOKED!!
                 <button id={styles.button} className="btn btn-primary" onClick={e => { e.preventDefault(); this.handleSubmit(e); }}>Logout</button>
                 </h4>
-                <div className="card card-body">
+                <div id={styles.bg} className="card card-body">
                     {this.renderList()}
                 </div>
             </div>

@@ -4,6 +4,7 @@ import styles from './home.module.css'
 
 class Home extends Component {
 
+
     handleSubmit = () => {
 
         const authToken = sessionStorage.getItem('authToken') || ''
@@ -13,13 +14,15 @@ class Home extends Component {
             }
         })
             .then(response => window.location.href = "/logindone")
+
+
     }
 
     render() {
         return (
-            <div className="jumbotron">
+            <div id={styles.bg} className="card card-body">
                 <h3>WELCOME TO BUS BOOKING SYSTEM</h3><br /><br />
-                <button className="btn btn-primary btn-lg" onClick={e => { e.preventDefault(); this.handleSubmit(); }} >START BOOKING</button>
+                <button id={styles.button} className="btn btn-primary btn-lg" onClick={e => { e.preventDefault(); this.handleSubmit(); }} >START BOOKING</button>
             </div>
         );
     }
