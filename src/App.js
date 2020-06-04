@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import styles from './App.modules.css';
 // import Login from './component/login/login';
 import Index from './home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -11,7 +11,7 @@ import Home from './components/home/Home'
 
 function App() {
   return (
-    <div>
+    <div id={styles.bg}>
       {/* <Navbar /> */}
 
       <Router>

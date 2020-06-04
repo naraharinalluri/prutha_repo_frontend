@@ -1,5 +1,5 @@
-body{
-  background: url('./bg1.jpg');
+/* body{
+  background: url('/ui/src/bg1.jpg');
   font-family: Arial, Helvetica, sans-serif;
   color:white;
   height: 100%;
@@ -8,7 +8,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
+} */
 .App {
   text-align: center;
 }
@@ -47,3 +47,4 @@ body{
     transform: rotate(360deg);
   }
 }
+

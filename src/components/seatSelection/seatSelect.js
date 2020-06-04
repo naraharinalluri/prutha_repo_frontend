@@ -12,6 +12,7 @@ class SeatSelect extends Component {
                     selected: false
                 }
             }),
+            busDetails: [this.props.value2],
             seatsBooked: [],
             seatsSelected: [],
             onlySeats: [],
@@ -22,7 +23,7 @@ class SeatSelect extends Component {
 
     componentDidMount() {
         this.setState({
-            seatsBooked: this.state.seatsBooked.concat(this.state.middleState)
+            seatsBooked: this.state.seatsBooked.concat(this.state.middleState),
         })
     }
 
@@ -76,6 +77,26 @@ class SeatSelect extends Component {
         })
     }
 
+    fare = () => {
+        const data = this.state.busDetails[0]
+        const FARE = data[0].service.fare * ((this.state.onlySeats).length)
+        return FARE
+    }
+
+    tax = () => {
+        const data = this.state.busDetails[0]
+        const TAX = (data[0].service.fare * ((this.state.onlySeats).length)) * 0.15
+        return TAX
+    }
+
+    total = () => {
+        const data = this.state.busDetails[0]
+        const FARE = data[0].service.fare * ((this.state.onlySeats).length)
+        const TAX = (data[0].service.fare * ((this.state.onlySeats).length)) * 0.15
+        const TOTAL = TAX + FARE
+        return TOTAL
+    }
+
     onChangeHandler = (event, seatNo) => {
         const muteState = [...this.state.seatsSelected];
 
@@ -89,6 +110,12 @@ class SeatSelect extends Component {
 
     tab = (n) => {
         this.props.changeTab(3)
+    }
+
+    dataSubmit = e => {
+        // const data = this.state.busDetails[0]
+        this.props.onPassengerDetails(this.state.seatsSelected)
+        // console.log(data[0].service.fare)
     }
 
     handleSubmit = () => {
@@ -126,10 +153,11 @@ class SeatSelect extends Component {
                 <div className="container text-light">
                     <br /><h5>TRIP INVOICE</h5><br />
                     <h6>Seats Selected : {(this.state.onlySeats).length} </h6>
-                    <h6>Price : </h6>
-                    <h6>Service Tax : </h6>
-                    <h6>Total Amount : </h6><br />
-                    <button className="paymentbtn" onClick={e => { e.preventDefault(); this.handleSubmit(); { this.tab(3) } }}>Proceed to Payment</button>
+                    <h6>Price (₹): {this.fare()}</h6>
+                    <h6>Service Tax (₹): {this.tax()}</h6>
+                    <h6>Total Amount (₹): {this.total()}</h6><br />
+                    {/* <button className="paymentbtn" onClick={e => { e.preventDefault(); { this.dataSubmit(e) } }}>Proceed to Payment</button> */}
+                    <button className="paymentbtn" onClick={e => { e.preventDefault(); this.handleSubmit(); { this.tab(3) }; { this.dataSubmit(e) } }}>Proceed to Payment</button>
                     <br /><br />
                 </div>
             </div >

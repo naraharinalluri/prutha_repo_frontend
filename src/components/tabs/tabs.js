@@ -4,6 +4,7 @@ import styles from './tabs.module.css';
 import Search from '../search/search';
 import SeatSelect from '../seatSelection/seatSelect';
 import Payment from '../payments/payment';
+import Confirm from '../confirmation/confirm';
 
 
 class Tabs extends Component {
@@ -11,7 +12,8 @@ class Tabs extends Component {
         super(props)
         this.state = {
             tab: 1,
-            busDetails: []
+            busDetails: [],
+            passengerDetails: []
         }
     }
 
@@ -25,13 +27,13 @@ class Tabs extends Component {
                 </div>
             )
             case 2: return (
-                <div><SeatSelect changeTab={this.handleTabChange} value={this.state.busDetails} /></div>
+                <div><SeatSelect value2={this.state.busDetails} changeTab={this.handleTabChange} value={this.state.busDetails} onPassengerDetails={this.handlePassDetails} /></div>
             )
             case 3: return (
                 <div><Payment changeTab={this.handleTabChange} /></div>
             )
             case 4: return (
-                <div>Ticket Confirmation</div>
+                <div><Confirm value={this.state.passengerDetails} /></div>
             )
             default: return null
         }
@@ -49,6 +51,11 @@ class Tabs extends Component {
         })
     }
 
+    handlePassDetails = (result) => {
+        this.setState({
+            passengerDetails: [...this.state.passengerDetails, result]
+        })
+    }
 
     render() {
         return (

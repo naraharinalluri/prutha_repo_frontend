@@ -16,17 +16,10 @@ class Payment extends Component {
             this.allFeedback.current.innerText = "All Fields are required"
             return
         }
-        this.emailFeedback.current.innerText = ""
-
-
-        // this.passwordFeedback.current.innerText = ""
-
-        // if (this.emailPattern.test(this.email.current.value) && this.password.current.value) {
-
-        //     window.location = '/user';
-
-
-        // }
+        else {
+            this.allFeedback.current.innerText = ""
+            { this.tab(4) };
+        }
 
     }
 
@@ -46,13 +39,12 @@ class Payment extends Component {
                             <tr>
                                 <td id={styles.paymentHead}>PAYMENT DETAILS</td>
                                 <div ref={this.allFeedback} className="text-danger"></div>
-
                             </tr>
                             <tr>
                                 <td>Card Type</td>
                                 <td> <input type="radio" name="cardType" value="visa" /> Visa &nbsp;
-            <input type="radio" name="cardType" value="master" /> Master Card
-        </td>
+                                <input type="radio" name="cardType" value="master" /> Master Card
+                            </td>
                             </tr>
                             <tr>
                                 <td>Card Number</td>
@@ -72,7 +64,7 @@ class Payment extends Component {
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><button className={styles.signupbtn} onClick={e => { e.preventDefault(); { this.tab(4) }; this.handleSubmit(e) }}>Pay</button><button className={styles.cancelbtn}>Cancel</button></td>
+                                <td><button className={styles.signupbtn} onClick={e => { e.preventDefault(); this.handleSubmit(e) }}>Pay</button><button className={styles.cancelbtn}>Cancel</button></td>
                             </tr>
                         </tbody>
                     </table>
